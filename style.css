@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#bgColorChanger{
+  background-color: rgb(143, 136, 136);
+  color: #fff;
+  padding: 7px 20px;
+  border: 1px solid gray;
+  /* margin-top: 20px; */
+  cursor: pointer;
+}
+#colorCode{
+  margin: 10px 0;
+}
