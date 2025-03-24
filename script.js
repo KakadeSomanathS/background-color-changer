@@ -17,8 +17,26 @@ function colorChange() {
 
   document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
 
-  localStorage.setItem('colorValue',)
+  localStorage.setItem('colorValue', JSON.stringify({
+    red,green,blue
+  }))
 }
 
 
-bgColorChanger.addEventListener('click',colorChange)
+bgColorChanger.addEventListener('click', colorChange);
+
+
+window.onload = () => {
+  const retrieveData = localStorage.getItem('colorValue');
+  console.log(retrieveData);
+  if (retrieveData) {
+    const data = JSON.parse(retrieveData);
+    console.log("get Item",data);
+    const { red, green, blue } = data;
+    colorCode.textContent = `rgb(${red},${green},${blue})`;
+
+    document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+  }
+  
+
+}
